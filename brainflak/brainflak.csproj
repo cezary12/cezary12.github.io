@@ -66,10 +66,43 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\custom.css" />
+    <Content Include="css\custom.min.css" />
+    <Content Include="css\site.min.css" />
+    <Content Include="css\vendor.min.css" />
+    <Content Include="fonts\Computer Modern Serif\cmunbi.svg" />
+    <Content Include="fonts\Computer Modern Serif\cmunbx.svg" />
+    <Content Include="fonts\Computer Modern Serif\cmunrm.svg" />
+    <Content Include="fonts\Computer Modern Serif\cmunti.svg" />
+    <Content Include="fonts\Computer Modern Serif\OFL-FAQ.txt" />
+    <Content Include="fonts\Computer Modern Serif\OFL.txt" />
+    <Content Include="fonts\Computer Modern Serif\README.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="gulpfile.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\app.min.js" />
+    <Content Include="js\site.min.js" />
+    <Content Include="js\vendor.min.js" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
+    <Content Include="fonts\Computer Modern Serif\cmunbi.eot" />
+    <Content Include="fonts\Computer Modern Serif\cmunbi.ttf" />
+    <Content Include="fonts\Computer Modern Serif\cmunbi.woff" />
+    <Content Include="fonts\Computer Modern Serif\cmunbx.eot" />
+    <Content Include="fonts\Computer Modern Serif\cmunbx.ttf" />
+    <Content Include="fonts\Computer Modern Serif\cmunbx.woff" />
+    <Content Include="fonts\Computer Modern Serif\cmunrm.eot" />
+    <Content Include="fonts\Computer Modern Serif\cmunrm.ttf" />
+    <Content Include="fonts\Computer Modern Serif\cmunrm.woff" />
+    <Content Include="fonts\Computer Modern Serif\cmunti.eot" />
+    <Content Include="fonts\Computer Modern Serif\cmunti.ttf" />
+    <Content Include="fonts\Computer Modern Serif\cmunti.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -84,6 +117,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
