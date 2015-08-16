@@ -52,7 +52,7 @@ gulp.task("min:vendor:js", function () {
 
 gulp.task("min:css", ["min:vendor:css", "min:app:css"], function () {
 
-    return gulp.src(["./css/vendor.min.css", "./js/custom.min.css"], { base: "." })
+    return gulp.src(["./css/vendor.min.css", "./css/custom.min.css"], { base: "." })
         .pipe(concat("./css/site.min.css"))
         .pipe(gulp.dest("."));
 });

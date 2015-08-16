@@ -45,4 +45,24 @@
 	font-style: italic;
 }
 
+body {
+    font-family: 'Computer Modern Serif', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 
+.question {
+    font-size: 3em
+}
+
+.answer {
+    font-size: 3.5em
+}
+
+.result {
+    border-top: 2px solid black;
+}
+
+.progress {
+    background-color: transparent;
+    border-radius: 0;
+    height:10px;
+}
