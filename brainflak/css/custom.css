@@ -66,3 +66,7 @@ body {
     border-radius: 0;
     height:10px;
 }
+
+.progress-bar {
+    transition: width 0.1s ease
+}

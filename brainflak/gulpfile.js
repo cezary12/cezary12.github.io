@@ -31,7 +31,7 @@ gulp.task("min:app:js", function () {
 
     return gulp.src(app, { base: "." })
         .pipe(concat("./js/app.min.js"))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest("."));
 });
 

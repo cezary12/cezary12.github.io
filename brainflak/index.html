@@ -5,46 +5,55 @@
     <meta charset="utf-8" />
     <link href="css/site.min.css" rel="stylesheet" />
 </head>
-<body>
+<body data-bind="event: { keydown: keydownAnswer }">
     <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-            <span class="sr-only">60% Complete</span>
+        <div role="progressbar"
+             class="progress-bar" 
+             aria-valuemin="0"
+             aria-valuemax="100"
+             data-bind="style: {width: progress() + '%'}, css: { 'progress-bar-success': isCorrectAnswer, 'progress-bar-danger': isIncorrectAnswer }">
         </div>
     </div>
-<div class="container">
-    <div class="row">
-        <div class="pull-right" style="margin-right:20px;">25 / 100</div>
-    </div>
-    <div class="row" style="margin-top: 50px;"></div>
-    <div class="row">
-        <div class="col-xs-4 col-xs-offset-3">
-            <span class="pull-right question">256</span>
+    <div class="container">
+        <div class="row">
+            <div class="pull-right" style="margin-right: 20px;">
+                <i class="glyphicon glyphicon-thumbs-up"></i>
+                <span data-bind="text: questionsCorrect"></span>
+                <i class="glyphicon glyphicon-thumbs-down" style="margin-left: 10px;"></i>
+                <span data-bind="text: questionsIncorrect"></span>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4 col-xs-offset-3">
-            <div class="pull-right question">·÷+−</div>
+        <div class="row" style="margin-top: 50px;"></div>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-3">
+                <span class="pull-right question" data-bind="text: inputFirst"></span>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4 col-xs-offset-3">
-            <div class="pull-right question">23</div>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-3">
+                <span class="pull-right question" data-bind="text: operation"></span>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4 col-xs-offset-3 result"></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1 col-xs-offset-3">
-            <div class="text-left answer">=</div>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-3">
+                <span class="pull-right question" data-bind="text: inputSecond"></span>
+            </div>
         </div>
-        <div class="col-xs-3">
-            <div class="text-right answer">3445</div>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-3 result"></div>
         </div>
+        <div class="row">
+            <div class="col-xs-1 col-xs-offset-3">
+                <div class="pull-left answer">=</div>
+            </div>
+            <div class="col-xs-3">
+                <span class="pull-right answer" 
+                      data-bind="text: inputAnswer, css: { 'btn-success': isCorrectAnswer, 'btn-danger': isIncorrectAnswer }"></span>
+            </div>
+        </div>
+
     </div>
 
-</div>
-
-<script src="js/site.min.js"></script>
+    <script src="js/site.min.js"></script>
 </body>
 </html>
