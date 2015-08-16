@@ -30,10 +30,22 @@
             }
         },
 
+        startTime: new Date(),
+        averageTime: ko.observable(""),
+        calculateAverageTime: function () {
+            var total = this.questionsTotal() + 1;
+            var currentTime = new Date();
+            var diff = currentTime.valueOf() - this.startTime.valueOf();
+            var av = diff / total / 1000;
+            this.averageTime(av.toFixed(2) + " sec.");
+        },
+
         progress: ko.observable(0),
 
         initTimer: function() {
             var pr = this.progress;
+            var calcAverageTime = this.calculateAverageTime;
+            var self = this;
 
             var timer = window.setInterval(function() {
                 var oldVal = pr();
@@ -41,7 +53,7 @@
                 var change = remaining / 25;
                 var updatedVal = oldVal + change;
                 pr(updatedVal);
-
+                calcAverageTime.call(self);
             }, 50);
 
             this.timer = timer;
