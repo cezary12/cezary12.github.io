@@ -50,7 +50,7 @@
             var timer = window.setInterval(function() {
                 var oldVal = pr();
                 var remaining = 100 - oldVal;
-                var change = remaining / 25;
+                var change = remaining / 100;
                 var updatedVal = oldVal + change;
                 pr(updatedVal);
                 calcAverageTime.call(self);
@@ -75,9 +75,15 @@
         isCorrectAnswer: ko.observable(false),
         isIncorrectAnswer: ko.observable(false),
 
-        setQuestion: function() {
-            var first = this.getRandomInt(1, 10);
-            var second = this.getRandomInt(1, 10);
+        setQuestion: function () {
+
+            var correctQuestions = this.questionsCorrect();
+
+            var min = 2 + correctQuestions;
+            var max = 11 + correctQuestions;
+
+            var first = this.getRandomInt(min, max);
+            var second = this.getRandomInt(min, max);
 
             this.inputAnswer(undefined);
             this.inputFirst(first);
