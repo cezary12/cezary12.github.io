@@ -114,7 +114,7 @@
                 isCorrectAnswer(false);
                 isIncorrectAnswer(false);
                 setQuestion.call(self);
-            }, 100);
+            }, 200);
         },
 
         checkAnswer: function(force) {
@@ -123,6 +123,7 @@
             if (answer === correctValue) {
                 this.next(true);
             } else if (force || answer > 10 * correctValue) {
+                this.inputAnswer(correctValue);
                 this.next(false);
             }
         },
