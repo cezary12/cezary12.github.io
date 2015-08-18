@@ -50,7 +50,7 @@
             var timer = window.setInterval(function() {
                 var oldVal = pr();
                 var remaining = 100 - oldVal;
-                var change = remaining / 100;
+                var change = remaining / 300;
                 var updatedVal = oldVal + change;
                 pr(updatedVal);
                 calcAverageTime.call(self);
