@@ -69,23 +69,18 @@ body {
     display: inline-block;
 }
 
-
-
 .keypad-number-inner {
     text-align: center;
     font-size: 3em;
     width: 100%;
     border-radius: 0;
     width: 100%;
+    cursor: pointer
 }
 
-    .keypad-number-inner:hover {
-        background-color: lightgray;
-    }
-
     .keypad-number-inner:active {
-        background-color: lightgray;
         color: white;
+        background-color: lightgray;
     }
 
 @media only screen and (max-device-width : 500px) {
